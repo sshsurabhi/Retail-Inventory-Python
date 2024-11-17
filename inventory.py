@@ -1,5 +1,5 @@
 class Product:
-    inventory = []  # Class variable to hold all Product instances
+    inventory = []
 
     def __init__(self, product_id, name, category, quantity, price, supplier):
         """ 
@@ -100,7 +100,13 @@ class Order:
 
 # Example Usage
 # Adding products to the inventory
+Product.add_product("Tab", "Electronics", 750, 50, "Supplier A")
+Product.add_product("Mobile", "Electronics", 630, 50, "Supplier A")
+Product.add_product("Watch", "Electronics", 540, 50, "Supplier A")
 print(Product.add_product("Laptop", "Electronics", 50, 1000, "Supplier A"))  # Should confirm success
+Product.add_product("Pant", "Clothing", 120, 29, "Supplier B")
+Product.add_product("Coat", "Clothing", 100, 150, "Supplier B")
+Product.add_product("Shoes", "Clothing", 125, 115, "Supplier B")
 print(Product.add_product("T-Shirt", "Clothing", 150, 20, "Supplier B"))  # Should confirm success
 
 # Checking the inventory
